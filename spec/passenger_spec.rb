@@ -19,5 +19,16 @@ RSpec.describe Passenger do
     it 'has an age' do
       expect(@charlie.age).to eq(18)
     end
+
+    it 'is an adult if 18' do
+      expect(@charlie.adult?).to eq(true)
+      expect(@taylor.adult?).to eq(false)
+    end
+
+    it 'can drive' do
+      expect(@charlie.driver?).to eq(false)
+      @charlie.drive
+      expect(@charlie.driver?).to eq(true)
+    end
   end
 end
