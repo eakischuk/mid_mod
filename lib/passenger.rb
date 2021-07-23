@@ -16,10 +16,6 @@ class Passenger
   end
 
   def adult?
-    if age > 17
-      true
-    else
-      false
-    end
+    @age > 17
   end
 end
